@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><Rowsets DateCreated="2016-07-19T16:15:13" EndDate="2016-07-14T10:29:49" StartDate="2016-07-14T10:29:49" Version="15.0 SP4 Patch 0 (Apr 21, 2015)">
+    <Rowset>
+        <Columns>
+            <Column Description="" MaxRange="1" MinRange="0" Name="SelesOrder" SQLDataType="1" SourceColumn="SelesOrder"/>
+            <Column Description="" MaxRange="1" MinRange="0" Name="Contract" SQLDataType="1" SourceColumn="Contract"/>
+            <Column Description="" MaxRange="1" MinRange="0" Name="CountryName" SQLDataType="1" SourceColumn="CountryName"/>
+            <Column Description="" MaxRange="1" MinRange="0" Name="ProductName" SQLDataType="1" SourceColumn="ProductName"/>
+            <Column Description="" MaxRange="1" MinRange="0" Name="Size" SQLDataType="1" SourceColumn="Size"/>
+            <Column Description="" MaxRange="1" MinRange="0" Name="Lenght" SQLDataType="1" SourceColumn="Lenght"/>
+            <Column Description="" MaxRange="1" MinRange="0" Name="SteelGrade" SQLDataType="1" SourceColumn="SteelGrade"/>
+            <Column Description="" MaxRange="1" MinRange="0" Name="ProductClass" SQLDataType="1" SourceColumn="ProductClass"/>
+            <Column Description="" MaxRange="1" MinRange="0" Name="Group" SQLDataType="1" SourceColumn="Group"/>
+            <Column Description="" MaxRange="1" MinRange="0" Name="Category" SQLDataType="1" SourceColumn="Category"/>
+            <Column Description="" MaxRange="1" MinRange="0" Name="DSTU" SQLDataType="1" SourceColumn="DSTU"/>
+            <Column Description="" MaxRange="1" MinRange="0" Name="Quantity" SQLDataType="1" SourceColumn="Quantity"/>
+            <Column Description="" MaxRange="1" MinRange="0" Name="Order" SQLDataType="1" SourceColumn="Order"/>
+            <Column Description="" MaxRange="1" MinRange="0" Name="TransferSuccess" SQLDataType="1" SourceColumn="TransferSuccess"/>
+            <Column Description="" MaxRange="1" MinRange="0" Name="Comment" SQLDataType="1" SourceColumn="Comment"/>
+        </Columns>
+        <Row>
+            <SelesOrder>5000339689</SelesOrder>
+            <Contract>51Z-2016/51Z0243</Contract>
+            <CountryName>Iraq</CountryName>
+            <ProductName>Test</ProductName>
+            <Size>2</Size>
+            <Lenght>2.33</Lenght>
+            <SteelGrade/>
+            <ProductClass>SC</ProductClass>
+            <Group>AA</Group>
+            <Category>No Category</Category>
+            <DSTU>ISO 6935-2:2007</DSTU>
+            <Quantity>12</Quantity>
+            <Order>1234567890</Order>
+            <TransferSuccess>1</TransferSuccess>
+            <Comment>Информация по заказу найдена.</Comment>
+        </Row>
+    </Rowset>
+</Rowsets>

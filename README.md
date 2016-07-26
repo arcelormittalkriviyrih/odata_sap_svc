@@ -1,1 +1,1 @@
-# odata_sap_svc
+# Web service to get orders from SAP via SAP service

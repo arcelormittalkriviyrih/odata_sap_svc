@@ -19,20 +19,8 @@ namespace SAPWebApi.Controllers
     {
         #region Const
 
-        /// <summary>	Test Structure XML from SAP file name. </summary>
-        private static readonly string cTestStructureXMLFromSAPFileName = @"testsructurexml.xml";
-
         /// <summary>	The OData service url. </summary>
         private static readonly string cODataServiceURL = WebConfigurationManager.AppSettings["ODataServiceURL"];
-
-        /// <summary>	The OData service user domain. </summary>
-        private static readonly string cODataServiceUserDomain = WebConfigurationManager.AppSettings["ODataServiceUserDomain"];
-
-        /// <summary>	The OData service user login. </summary>
-        private static readonly string cODataServiceUserLogin = WebConfigurationManager.AppSettings["ODataServiceUserLogin"];
-
-        /// <summary>	The OData service user password. </summary>
-        private static readonly string cODataServiceUserPassword = WebConfigurationManager.AppSettings["ODataServiceUserPassword"];
 
         #endregion
 
@@ -131,7 +119,7 @@ namespace SAPWebApi.Controllers
             request.Method = "POST";
             request.ContentType = "application/json";
             request.ContentLength = body.Length;
-            request.Credentials = new NetworkCredential(cODataServiceUserLogin, cODataServiceUserPassword, cODataServiceUserDomain);
+            request.Credentials = CredentialCache.DefaultNetworkCredentials;
 
             using (Stream stream = request.GetRequestStream())
             {

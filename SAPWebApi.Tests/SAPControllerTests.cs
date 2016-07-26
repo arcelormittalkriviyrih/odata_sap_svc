@@ -42,23 +42,23 @@ namespace SAPWebApi.Tests
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
         }
 
-        [TestMethod()]
-        public async Task GetSAPInfoTest()
-        {
-            var request = new HttpRequestMessage(HttpMethod.Get, @"http://host/GetSAPInfo?orderNo='5000339689'");
-            request.Headers.Accept.Add(MediaTypeWithQualityHeaderValue.Parse("application/json;odata.metadata=full"));
-            var response = await client.SendAsync(request);
-            var result = await response.Content.ReadAsStringAsync();
+        //[TestMethod()]
+        //public async Task GetSAPInfoTest()
+        //{
+        //    var request = new HttpRequestMessage(HttpMethod.Get, @"http://host/GetSAPInfo?orderNo='5000339689'");
+        //    request.Headers.Accept.Add(MediaTypeWithQualityHeaderValue.Parse("application/json;odata.metadata=full"));
+        //    var response = await client.SendAsync(request);
+        //    var result = await response.Content.ReadAsStringAsync();
 
-            JObject jsonResult = JObject.Parse(result);
-            JToken sapValue = jsonResult.GetValue("value");
-            JToken sapFirst = sapValue.First;
-            JToken sapSelesOrder = sapFirst.SelectToken("Name");
-            JToken sapSelesOrderValue = sapFirst.SelectToken("Value");
+        //    JObject jsonResult = JObject.Parse(result);
+        //    JToken sapValue = jsonResult.GetValue("value");
+        //    JToken sapFirst = sapValue.First;
+        //    JToken sapSelesOrder = sapFirst.SelectToken("Name");
+        //    JToken sapSelesOrderValue = sapFirst.SelectToken("Value");
 
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
-            Assert.IsTrue(sapSelesOrder.Value<string>() == "SelesOrder");
-            Assert.IsTrue(sapSelesOrderValue.Value<string>() == "5000339689");
-        }
+        //    Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+        //    Assert.IsTrue(sapSelesOrder.Value<string>() == "SelesOrder");
+        //    Assert.IsTrue(sapSelesOrderValue.Value<string>() == "5000339689");
+        //}
     }
 }

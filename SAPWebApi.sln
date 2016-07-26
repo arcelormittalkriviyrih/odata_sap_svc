@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPWebApi", "SAPWebApi\SAPWebApi.csproj", "{B30192C9-340C-4FD6-9034-4D62377BFCDE}"
 EndProject
@@ -24,5 +24,17 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://109.95.53.22:33362/tfs/bulkteq
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SAPWebApi\\SAPWebApi.csproj
+		SccProjectName1 = SAPWebApi
+		SccLocalPath1 = SAPWebApi
+		SccProjectUniqueName2 = SAPWebApi.Tests\\SAPWebApi.Tests.csproj
+		SccProjectName2 = SAPWebApi.Tests
+		SccLocalPath2 = SAPWebApi.Tests
 	EndGlobalSection
 EndGlobal

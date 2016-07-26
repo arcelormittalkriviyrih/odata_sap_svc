@@ -89,14 +89,15 @@ namespace SAPWebApi.Controllers
                 {
                     SAPLogger.Instance.WriteLoggerLogError("GetSAPInfo->Call SAP service:", ex);
 
-                    string xmlTestStructureFromSAP = Properties.Resources.testsructurexml;
-                    dynamic sapObject = DynamicXml.Parse(xmlTestStructureFromSAP);
+                    throw ex;
+                    //string xmlTestStructureFromSAP = Properties.Resources.testsructurexml;
+                    //dynamic sapObject = DynamicXml.Parse(xmlTestStructureFromSAP);
 
-                    System.Xml.Linq.XElement rootRowSet = sapObject.Rowset.Row.Root;
-                    foreach (var xmlElement in rootRowSet.Elements())
-                    {
-                        sapParameters.Add(new SAPParameter() { Name = xmlElement.Name.LocalName, Value = xmlElement.Value });
-                    }
+                    //System.Xml.Linq.XElement rootRowSet = sapObject.Rowset.Row.Root;
+                    //foreach (var xmlElement in rootRowSet.Elements())
+                    //{
+                    //    sapParameters.Add(new SAPParameter() { Name = xmlElement.Name.LocalName, Value = xmlElement.Value });
+                    //}
                 }
             }
 

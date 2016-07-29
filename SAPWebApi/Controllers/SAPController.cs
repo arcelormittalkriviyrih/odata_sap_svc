@@ -12,6 +12,7 @@ using System.Web.Hosting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SAPWebApi.Log;
+using System.Security.Principal;
 
 namespace SAPWebApi.Controllers
 {
@@ -50,8 +51,6 @@ namespace SAPWebApi.Controllers
         [ODataRoute("GetSAPInfo")]
         public List<SAPParameter> GetSAPInfo(string orderNo)
         {
-            SAPLogger.Instance.WriteLoggerLogError(string.Format("User=[{0}]", CredentialCache.DefaultNetworkCredentials.UserName));
-
             #region Call Odata service procedure
 
             var product = new { COMM_ORDER = orderNo, URL = string.Empty };
@@ -66,7 +65,7 @@ namespace SAPWebApi.Controllers
             }
             catch (Exception ex)
             {
-                SAPLogger.Instance.WriteLoggerLogError(string.Format("GetSAPInfo->Call Odata service User=[{0}]:", CredentialCache.DefaultNetworkCredentials.UserName), ex);
+                SAPLogger.Instance.WriteLoggerLogError("GetSAPInfo->Call Odata service:", ex);
                 throw ex;
             }
 
